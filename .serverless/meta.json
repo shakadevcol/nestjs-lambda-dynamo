@@ -1,0 +1,152 @@
+{
+  "/Users/sergio/Documents/practicas/lambda-dynamo": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.18",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>",
+      "sls": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "serverless-lambda-dynamo",
+            "plugins": [
+              "serverless-offline"
+            ],
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs18.x",
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true,
+              "environment": {
+                "IS_LOCAL": "true"
+              }
+            },
+            "functions": {
+              "main": {
+                "handler": "dist/main.handler",
+                "events": [
+                  {
+                    "http": {
+                      "method": "ANY",
+                      "path": "/"
+                    }
+                  },
+                  {
+                    "http": {
+                      "method": "ANY",
+                      "path": "{proxy+}"
+                    }
+                  }
+                ],
+                "name": "serverless-lambda-dynamo-dev-main"
+              }
+            }
+          },
+          "configFileDirPath": "/Users/sergio/Documents/practicas/lambda-dynamo",
+          "config": {
+            "type": "sls"
+          },
+          "options": {
+            "function": "main",
+            "data": "{\"body\":{\"requestType\":\"getUsers\"}}"
+          },
+          "stage": "dev",
+          "dashboard": null,
+          "logger": {
+            "namespace": "s:core:resolver:sls",
+            "prefix": null,
+            "prefixColor": null
+          },
+          "_credentialsPromise": "<REDACTED>"
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/sergio/Documents/practicas/lambda-dynamo",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "serverless-lambda-dynamo",
+      "plugins": [
+        "serverless-offline"
+      ],
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true,
+        "environment": {
+          "IS_LOCAL": "true"
+        }
+      },
+      "functions": {
+        "main": {
+          "handler": "dist/main.handler",
+          "events": [
+            {
+              "http": {
+                "method": "ANY",
+                "path": "/"
+              }
+            },
+            {
+              "http": {
+                "method": "ANY",
+                "path": "{proxy+}"
+              }
+            }
+          ],
+          "name": "serverless-lambda-dynamo-dev-main"
+        }
+      }
+    },
+    "serviceRawFile": "service: serverless-lambda-dynamo\n\nplugins:\n  - serverless-offline\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n\nfunctions:\n  main:\n    handler: dist/main.handler\n    events:\n      - http:\n          method: ANY\n          path: /\n      - http:\n          method: ANY\n          path: '{proxy+}'\n",
+    "command": [
+      "invoke",
+      "local"
+    ],
+    "options": {
+      "function": "main",
+      "data": "{\"body\":{\"requestType\":\"getUsers\"}}"
+    },
+    "error": null,
+    "params": {},
+    "machineId": "54fab763bfc192af6c9abba72385afea",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "16154551-b928-4d16-ad44-465ee4230378",
+    "orgName": "sergiowompi",
+    "userId": "58xlb9CVKQ2X7hfv0k",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "sergiowompi",
+    "subscription": null,
+    "userEmail": "sergio.aristizabal@wompi.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "381491834996",
+    "projectType": "traditional",
+    "versionSf": "4.4.18",
+    "serviceProviderAwsCfStackName": "serverless-lambda-dynamo-dev",
+    "integrations": {},
+    "serviceUniqueId": null,
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:381491834996:stack/serverless-lambda-dynamo-prod/856e2520-94be-11ef-a24c-0e87fe3d5aad",
+    "serviceProviderAwsCfStackCreated": "2024-10-27T23:52:27.618Z",
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": "DELETE_IN_PROGRESS",
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
